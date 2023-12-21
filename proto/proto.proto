@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pet;
+
+option go_package = "github.com/jamascrorpJS/grpc_service";
+
+service message {
+
+	rpc Send(Sender) returns (Response);
+}
+
+message Sender {
+	string message = 1;
+}
+
+
+message Response {
+	string response = 1;
+}
